@@ -8,3 +8,11 @@ class Hash
     map {|key, value| args.include?(value) ? key : nil }.compact
   end
 end
+
+clas Hash
+  def keys_of(*args)
+    collect do |k, v| 
+      args.include?(v) ? k : nil 
+    end.compact
+  end
+end 
