@@ -6,7 +6,7 @@
 class Hash
   def keys_of(*args)
     collect do |k, v| 
-      args.include?(v) ? k : nil 
+      args.include?(v)? k : nil 
     end.compact
   end
 end 
