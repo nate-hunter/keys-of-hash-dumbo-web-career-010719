@@ -4,11 +4,7 @@
 
 
 class Hash
-  def keys_of(arguments)
-    array = []
-    
-    hash.key == arguments  
-    
-    array 
+  def keys_of(*args)
+    map {|key, value| args.include?(value) ? key : nil }.compact
   end
 end
